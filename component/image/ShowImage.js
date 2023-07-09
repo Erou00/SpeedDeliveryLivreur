@@ -16,7 +16,7 @@ const ShowImage = ({imageName,imageStyle,defaultImage}) => {
   const fetchImage = async () => {
     const token = await AsyncStorage.getItem("@user")
     try {
-        const response = await axios.get(`http://192.168.20.115:8080/api/private/file-name/${imageName}`, {
+        const response = await axios.get(`http://192.168.1.37:8080/api/private/file-name/${imageName}`, {
           responseType: 'blob',
           headers: {
             'Authorization': `Bearer ${token}`

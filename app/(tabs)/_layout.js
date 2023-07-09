@@ -22,7 +22,8 @@ export default () => {
       }
 
     return (
-        <Tabs screenOptions={screenOptions}>
+        <Tabs  initialRouteName="home" screenOptions={screenOptions}>
+           
             <Tabs.Screen name="home"  options={{
              tabBarIcon: ({focused})=>{
               return (
@@ -45,7 +46,7 @@ export default () => {
                 )
               }
             }} />
-            <Tabs.Screen name="statistique"  options={{
+            {/* <Tabs.Screen name="statistique"  options={{
              tabBarIcon: ({focused})=>{
               return (
               <View style={{alignItems: "center", justifyContent: "center"}}> 
@@ -54,7 +55,7 @@ export default () => {
               </View>
                 )
               }
-            }}/>
+            }}/> */}
             <Tabs.Screen name="profile"  options={{
              tabBarIcon: ({focused})=>{
               return (

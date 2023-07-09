@@ -1,10 +1,19 @@
 {
   "expo": {
-    "scheme": "acme",
+    "scheme": "com.ayoubessahat.speeddelivery",
     "web": {
       "bundler": "metro"
     },
     "name": "DeliveryMan",
-    "slug": "DeliveryMan"
+    "slug": "DeliveryMan",
+    "android": {
+      "package": "com.ayoubessahat.speeddelivery",
+      "googleServicesFile": "./google-services.json"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "7dd20707-575e-4905-9279-2cb532d9ada3"
+      }
+    }
   }
 }

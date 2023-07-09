@@ -87,3 +87,24 @@ export const livreur_location = async (id,data) => {
   }
 
 };
+
+
+export const livreur_expoToken = async (id,data) => {
+  console.log(data);
+  try {  
+   const token = await AsyncStorage.getItem("@user")
+   const result = await ApiManager(`/private/livreurs/expoToken/${id}`,{
+     method: 'PUT',
+     headers: {
+       'content-type': 'application/json',
+       'Access-Control-Allow-Origin':'*',
+       'Authorization': `Bearer ${token}`
+     },
+     data:data
+   });
+   return result;
+ } catch (error) {
+   return error.response.data;
+ }
+
+};

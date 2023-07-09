@@ -17,13 +17,17 @@ const OrderItem = ({order}) => {
           <Text style={styles.productName}>{order.owner}</Text>
          
           <View style={{flexDirection:'row'}}>
+             <FontAwesome5 name="user-tag" size={18} color="grey" style={{marginRight:4}} />                
+             <Text style={styles.productDescription}>{order.owner}</Text>
+          </View>
+          <View style={{flexDirection:'row'}}>
              <FontAwesome name="phone-square" size={18} color="grey" style={{marginRight:4}} />                
              <Text style={styles.productDescription}>{order.phone}</Text>
           </View>
 
           <View style={{flexDirection:'row'}}>
              <FontAwesome5 name="map-marker-alt" size={18} color="grey" style={{marginRight:4}} />                
-             <Text style={styles.productDescription}>{order.address}</Text>
+             <Text numberOfLines={2} style={styles.productDescription}>{order.address}</Text>
           </View>
 
           <Text style={styles.productPrice}>{order.price.toFixed(2)} <Text style={styles.productPriceText}> MAD</Text></Text>

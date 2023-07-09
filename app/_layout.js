@@ -8,10 +8,15 @@ import { Provider, useAuth } from '../context/auth'
 import { PanGestureHandler } from 'react-native-gesture-handler'
 import {Root as PopupRootProvider} from 'react-native-popup-confirm-toast';
 import { OrderProvider } from '../context/OrderContext'
+import { useNotificationObserver } from '../hooks/useNotifications'
+//import { useRouterNotifications } from '../hooks/useNotifications'
 
 
 SplashScreen.preventAutoHideAsync()
-const _layout = () => {
+const _layout = () => { 
+  // useRouterNotifications()
+
+  useNotificationObserver();
   const [fontsLoaded] = useFonts({
     DMBold : require('../assets/fonts/DMSans-Bold.ttf'),
     DMMedium : require('../assets/fonts/DMSans-Medium.ttf'),
@@ -31,12 +36,13 @@ const _layout = () => {
 
   if (!fontsLoaded) return null;
 
+
   return (
     <Provider>
       <OrderProvider>
         <PopupRootProvider>
-          <Stack>
-            <Stack.Screen name="(tabs)" options={{headerShown:false}}/>
+          <Stack initialRouteName='home'>
+            <Stack.Screen  name='(tabs)' options={{headerShown:false}}/>
           </Stack>
         </PopupRootProvider>
       </OrderProvider>

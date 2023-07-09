@@ -39,7 +39,9 @@
     "react-native-web": "~0.18.7",
     "sockjs-client": "^1.6.1",
     "stompjs": "^2.3.3",
-    "yup": "^1.2.0"
+    "yup": "^1.2.0",
+    "expo-notifications": "~0.18.1",
+    "expo-device": "~5.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",

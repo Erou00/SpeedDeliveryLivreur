@@ -20,10 +20,12 @@ export const get_commandes = async(livId,address,pack_id,currentPage)=>{
         },
         });
 
+        console.log(result);
       return result;
     
     }  
         catch (error) {
+          console.log(error);
         return error.response.data;
     }
 }
@@ -105,9 +107,11 @@ export const validate_commande = async (commande_id,statut,data) => {
       },
       data:data
     });
-
+     
+    console.log(result);
     return result;
   } catch (error) {
+    console.log(error);
     return error.response.data;
   }
 
